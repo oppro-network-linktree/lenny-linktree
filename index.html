@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LennyPegauOfficial – Links</title>
+<meta name="theme-color" content="#0a1230">
+<style>
+  :root {
+    --gold: #ffd27a;
+    --text: #f6f3ee;
+    --muted: #c3c8e0;
+    --glass: rgba(255,255,255,.09);
+    --glass-hover: rgba(255,255,255,.16);
+    --line: rgba(255,255,255,.20);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { min-height: 100%; background: #0a1230; }
+  body {
+    min-height: 100vh;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(ellipse 80% 40% at 50% 100%, rgba(255,190,110,.55), transparent 70%),
+      linear-gradient(180deg, #0a1230 0%, #16225a 45%, #5a3470 78%, #d98a62 100%);
+    background-attachment: fixed;
+    padding: 56px 20px 230px;
+    display: flex; justify-content: center;
+    overflow-x: hidden;
+  }
+  /* Skyline */
+  .skyline {
+    position: fixed; left: 0; right: 0; bottom: 0; height: 250px;
+    width: 100%; pointer-events: none; z-index: 0;
+  }
+  main { position: relative; z-index: 1; width: 100%; max-width: 460px; }
+
+  header { text-align: center; margin-bottom: 34px; }
+  .logo {
+    width: 96px; height: 96px; margin: 0 auto 20px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 30px; font-weight: 800; letter-spacing: -1px;
+    color: #1a1236;
+    background: radial-gradient(circle at 30% 25%, #fff0c4, var(--gold) 60%, #f0a64a);
+    box-shadow: 0 0 0 6px rgba(255,210,122,.18), 0 0 40px rgba(255,200,110,.45);
+  }
+  h1 { font-size: 1.9rem; line-height: 1.15; letter-spacing: .01em; font-weight: 800; }
+  header p { color: var(--muted); margin-top: 8px; font-size: 1rem; }
+
+  ul { list-style: none; padding: 0; display: grid; gap: 12px; }
+  a.link {
+    display: flex; align-items: center; gap: 16px;
+    padding: 14px 18px 14px 14px;
+    border-radius: 18px;
+    background: var(--glass);
+    border: 1px solid var(--line);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    color: var(--text); text-decoration: none;
+    transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+  }
+  a.link:hover { background: var(--glass-hover); transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,.28); }
+  a.link:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .badge {
+    width: 48px; height: 48px; flex: none; border-radius: 14px;
+    display: grid; place-items: center;
+    background: var(--c, #fff); color: var(--ic, #fff);
+  }
+  .badge svg { width: 26px; height: 26px; fill: currentColor; }
+  .text { flex: 1; min-width: 0; }
+  .label { display: block; font-weight: 700; font-size: 1.05rem; }
+  .sub { display: block; font-size: .87rem; color: var(--muted); margin-top: 2px; }
+  .chev { width: 20px; height: 20px; flex: none; stroke: var(--muted); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform .18s ease; }
+  a.link:hover .chev { transform: translateX(4px); stroke: var(--text); }
+
+  .featured {
+    background: linear-gradient(135deg, rgba(255,210,122,.30), rgba(255,210,122,.10));
+    border-color: rgba(255,210,122,.65);
+    padding: 18px 18px 18px 16px;
+  }
+  .featured .label { font-size: 1.15rem; }
+
+  @media (prefers-reduced-motion: no-preference) { .blink { animation: blink 2.6s ease-in-out infinite; } @keyframes blink { 0%,55%,100% { opacity: 1; } 70%,85% { opacity: .15; } } }
+  /* Einmaliger Einstieg der Liste */
+  @media (prefers-reduced-motion: no-preference) {
+    li { opacity: 0; animation: in .55s ease forwards; animation-delay: calc(var(--i, 0) * .07s); }
+    @keyframes in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  }
+  @media (prefers-reduced-motion: reduce) { a.link, .chev { transition: none; } }
+  @media (max-width: 380px) { h1 { font-size: 1.6rem; } .sub { display: none; } }
+
+  li.group { opacity: 1; animation: none; margin: 10px 0 -2px; padding-left: 4px;
+    font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+  li.group:first-child { margin-top: 0; }
+  @media (prefers-reduced-motion: no-preference) { li.group { opacity: 0; animation: in .55s ease forwards; animation-delay: calc(var(--i, 0) * .07s); } }
+</style>
+</head>
+<body>
+
+<svg class="skyline" viewBox="0 -20 1200 250" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<g fill="#1b2360">
+  <!-- Leipzig am Horizont: City-Hochhaus + Völkerschlachtdenkmal -->
+  <path d="M846 230V150L850 138H862L866 150V230Z"/><rect x="855" y="124" width="1.4" height="14"/>
+  <rect x="880" y="214" width="46" height="16"/><rect x="887" y="202" width="32" height="14"/>
+  <rect x="893" y="186" width="20" height="18"/><path d="M893 186C893 172 913 172 913 186Z"/>
+  <rect x="936" y="212" width="40" height="18"/><rect x="990" y="218" width="50" height="12"/>
+  <!-- Hügel / Feldlinie -->
+  <path d="M0 214Q150 200 300 212T600 210T900 214T1200 208V230H0Z"/>
+</g>
+<!-- Sendemast Wiederau -->
+<g stroke="#2a3478" stroke-width="1.4" fill="none">
+  <line x1="1080" y1="-8" x2="1080" y2="222"/><line x1="1085" y1="-8" x2="1085" y2="222"/>
+  <path d="M1080 10L1085 24M1085 10L1080 24M1080 28L1085 42M1085 28L1080 42M1080 46L1085 60M1085 46L1080 60M1080 64L1085 78M1085 64L1080 78M1080 82L1085 96M1085 82L1080 96M1080 100L1085 114M1085 100L1080 114M1080 118L1085 132M1085 118L1080 132M1080 136L1085 150M1085 136L1080 150M1080 154L1085 168M1085 154L1080 168M1080 172L1085 186M1085 172L1080 186"/>
+  <line x1="1082.500" y1="40" x2="1022" y2="214" stroke-width=".8"/><line x1="1082.500" y1="40" x2="1144" y2="214" stroke-width=".8"/>
+</g>
+<g fill="#0a0f2a">
+  <!-- Bäume -->
+  <circle cx="30" cy="206" r="18"/><rect x="28.5" y="222" width="3" height="8"/><circle cx="62" cy="210" r="14"/><rect x="60.5" y="222" width="3" height="8"/><circle cx="210" cy="207" r="17"/><rect x="208.5" y="222" width="3" height="8"/><circle cx="330" cy="209" r="15"/><rect x="328.5" y="222" width="3" height="8"/><circle cx="724" cy="210" r="14"/><rect x="722.5" y="222" width="3" height="8"/><circle cx="1000" cy="206" r="18"/><rect x="998.5" y="222" width="3" height="8"/><circle cx="1032" cy="211" r="13"/><rect x="1030.5" y="222" width="3" height="8"/><circle cx="1160" cy="207" r="17"/><rect x="1158.5" y="222" width="3" height="8"/><circle cx="1190" cy="211" r="13"/><rect x="1188.5" y="222" width="3" height="8"/>
+  <!-- Altstadthäuser -->
+  <path d="M90 230V190L116 172L142 190V230Z"/>
+  <path d="M142 230V196h36v34Z"/>
+  <path d="M178 230V186L196 168L214 186V230Z"/>
+  <path d="M236 230V198h30l8-10 8 10h28v32Z"/>
+  <path d="M502 230V206h18v24Z"/>
+  <path d="M700 230V196h32v34Z"/>
+  <path d="M730 230V188L752 170L774 188V230Z"/>
+  <path d="M800 230V200h30V186L848 172L866 186V200h30v30Z"/>
+  <path d="M896 230V198h40v32Z"/>
+  <path d="M936 230V190L960 172L984 190V230Z"/>
+  <!-- Stadtkirche St. Laurentius: Hallenkirche + Turm -->
+  <path d="M392 230V180L412 134H468L488 180V230Z"/>
+  <rect x="366" y="108" width="24" height="122"/>
+  <path d="M363 108L378 62L393 108Z"/>
+  <rect x="377" y="50" width="2" height="14"/>
+  <rect x="488" y="196" width="22" height="34"/>
+  <!-- Rathaus Pegau: Renaissance, Langbau + Mittelturm -->
+  <rect x="520" y="168" width="160" height="62"/>
+  <path d="M514 170L536 128H664L686 170Z"/>
+  <path d="M546 150L554 136L562 150ZM574 150L582 136L590 150ZM610 150L618 136L626 150ZM638 150L646 136L654 150Z"/>
+  <rect x="590" y="96" width="20" height="36"/>
+  <rect x="586" y="84" width="28" height="14"/>
+  <path d="M586 84Q586 68 600 64Q614 68 614 84Z"/>
+  <rect x="596" y="50" width="8" height="16"/>
+  <path d="M594 50L600 36L606 50Z"/>
+  <rect x="599" y="26" width="2" height="12"/>
+  <!-- Wasserturm -->
+  <rect x="762" y="132" width="16" height="98"/>
+  <rect x="754" y="100" width="32" height="34"/>
+  <path d="M752 100L770 78L788 100Z"/>
+</g>
+<g fill="#ffd27a" opacity=".9"><rect x="590" y="176" width="3" height="5"/><rect x="634" y="176" width="3" height="5"/><rect x="645" y="176" width="3" height="5"/><rect x="656" y="176" width="3" height="5"/><rect x="535" y="189" width="3" height="5"/><rect x="590" y="189" width="3" height="5"/><rect x="601" y="189" width="3" height="5"/><rect x="623" y="189" width="3" height="5"/><rect x="634" y="189" width="3" height="5"/><rect x="645" y="189" width="3" height="5"/><rect x="656" y="189" width="3" height="5"/><rect x="601" y="202" width="3" height="5"/><rect x="656" y="202" width="3" height="5"/><rect x="667" y="202" width="3" height="5"/><rect x="524" y="215" width="3" height="5"/><rect x="535" y="215" width="3" height="5"/><rect x="579" y="215" width="3" height="5"/><rect x="612" y="215" width="3" height="5"/><rect x="623" y="215" width="3" height="5"/><rect x="667" y="215" width="3" height="5"/><rect x="592" y="102" width="3" height="4"/><rect x="600" y="111" width="3" height="4"/><rect x="592" y="120" width="3" height="4"/><rect x="600" y="120" width="3" height="4"/><rect x="111" y="196" width="3" height="4"/><rect x="120" y="196" width="3" height="4"/><rect x="129" y="196" width="3" height="4"/><rect x="93" y="208" width="3" height="4"/><rect x="111" y="208" width="3" height="4"/><rect x="93" y="220" width="3" height="4"/><rect x="111" y="220" width="3" height="4"/><rect x="129" y="220" width="3" height="4"/><rect x="154" y="200" width="3" height="4"/><rect x="163" y="200" width="3" height="4"/><rect x="172" y="212" width="3" height="4"/><rect x="267" y="202" width="3" height="4"/><rect x="285" y="202" width="3" height="4"/><rect x="294" y="202" width="3" height="4"/><rect x="249" y="214" width="3" height="4"/><rect x="258" y="214" width="3" height="4"/><rect x="267" y="214" width="3" height="4"/><rect x="276" y="214" width="3" height="4"/><rect x="294" y="214" width="3" height="4"/><rect x="744" y="192" width="3" height="4"/><rect x="753" y="192" width="3" height="4"/><rect x="744" y="204" width="3" height="4"/><rect x="753" y="204" width="3" height="4"/><rect x="744" y="216" width="3" height="4"/><rect x="821" y="204" width="3" height="4"/><rect x="830" y="204" width="3" height="4"/><rect x="848" y="204" width="3" height="4"/><rect x="866" y="204" width="3" height="4"/><rect x="803" y="216" width="3" height="4"/><rect x="812" y="216" width="3" height="4"/><rect x="830" y="216" width="3" height="4"/><rect x="839" y="216" width="3" height="4"/><rect x="875" y="216" width="3" height="4"/><rect x="940" y="194" width="3" height="4"/><rect x="949" y="194" width="3" height="4"/><rect x="958" y="194" width="3" height="4"/><rect x="976" y="194" width="3" height="4"/><rect x="940" y="206" width="3" height="4"/><rect x="967" y="206" width="3" height="4"/><rect x="368" y="116" width="3" height="4"/><rect x="376" y="116" width="3" height="4"/><rect x="384" y="116" width="3" height="4"/><rect x="368" y="140" width="3" height="4"/><rect x="368" y="164" width="3" height="4"/><rect x="410" y="170" width="6" height="40" rx="1"/><rect x="432" y="170" width="6" height="40" rx="1"/><rect x="454" y="170" width="6" height="40" rx="1"/><rect x="774" y="106" width="3" height="4"/><rect x="774" y="115" width="3" height="4"/></g>
+<g fill="#ff4d4d" class="blink">
+  <circle cx="1082.500" cy="-8" r="2.400"/><circle cx="1082.500" cy="70" r="1.800"/><circle cx="1082.500" cy="150" r="1.800"/><circle cx="600" cy="24" r="1.800"/>
+</g></svg>
+
+<main>
+  <header>
+    <div class="logo" aria-hidden="true">LP</div>
+    <h1>LennyPegauOfficial</h1>
+    <p>Alle meine Kanäle an einem Ort</p>
+  </header>
+
+  <ul>
+    <li class="group" style="--i:0">Social Media</li>
+    <li style="--i:1">
+      <a class="link" href="https://www.instagram.com/lenny.pegau.official/" target="_blank" rel="noopener noreferrer">
+        <span class="badge" style="--c:linear-gradient(45deg,#f9a03c,#e1306c,#833ab4)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.500a4.500 4.500 0 1 1 0 9 4.500 4.500 0 0 1 0-9zm0 2a2.500 2.500 0 1 0 0 5 2.500 2.500 0 0 0 0-5zm5.200-3.200a1.100 1.100 0 1 1 0 2.200 1.100 1.100 0 0 1 0-2.200z"/></svg></span>
+        <span class="text"><span class="label">Instagram</span><span class="sub">@lenny.pegau.official</span></span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </li>
+    <li style="--i:2">
+      <a class="link" href="https://www.youtube.com/@LennyPegauOfficial117" target="_blank" rel="noopener noreferrer">
+        <span class="badge" style="--c:#ff2d2d"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 5h12a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4zm4 4v6l5-3z"/></svg></span>
+        <span class="text"><span class="label">YouTube</span><span class="sub">LennyPegauOfficial</span></span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </li>
+    <li style="--i:3">
+      <a class="link" href="https://www.twitch.tv/lennypegauofficial117" target="_blank" rel="noopener noreferrer">
+        <span class="badge" style="--c:#9146ff"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M3 2h18v12l-5 5h-4l-3 3H8v-3H3zM10 6v5h2V6zm4.500 0v5h2V6z"/></svg></span>
+        <span class="text"><span class="label">Twitch</span><span class="sub">Live-Streams</span></span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </li>
+    <li style="--i:4">
+      <a class="link" href="https://medal.tv/u/lennypegauofficial" target="_blank" rel="noopener noreferrer">
+        <span class="badge" style="--c:linear-gradient(135deg,#ffd27a,#f0a64a);--ic:#1a1236"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg></span>
+        <span class="text"><span class="label">Medal</span><span class="sub">Gaming-Clips</span></span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </li>
+    <li class="group" style="--i:5">Discord-Server</li>
+    <li style="--i:6">
+      <a class="link" href="https://discord.gg/3exvdU2t3Q" target="_blank" rel="noopener noreferrer">
+        <span class="badge" style="--c:#5865f2"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5 4h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-8l-5 4v-4H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zm4 6a1.500 1.500 0 1 0 0 3 1.500 1.500 0 0 0 0-3zm6 0a1.500 1.500 0 1 0 0 3 1.500 1.500 0 0 0 0-3z"/></svg></span>
+        <span class="text"><span class="label">OPPRO.NET Network</span><span class="sub">Discord-Server</span></span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </li>
+    <li style="--i:7">
+      <a class="link" href="https://discord.gg/xdCkHfrwCx" target="_blank" rel="noopener noreferrer">
+        <span class="badge" style="--c:#5865f2"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5 4h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-8l-5 4v-4H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zm4 6a1.500 1.500 0 1 0 0 3 1.500 1.500 0 0 0 0-3zm6 0a1.500 1.500 0 1 0 0 3 1.500 1.500 0 0 0 0-3z"/></svg></span>
+        <span class="text"><span class="label">Emergency Leipzig</span><span class="sub">Discord-Server</span></span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </li>
+    <li style="--i:8">
+      <a class="link" href="https://discord.gg/VUbPdGcBXb" target="_blank" rel="noopener noreferrer">
+        <span class="badge" style="--c:#5865f2"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5 4h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-8l-5 4v-4H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3zm4 6a1.500 1.500 0 1 0 0 3 1.500 1.500 0 0 0 0-3zm6 0a1.500 1.500 0 1 0 0 3 1.500 1.500 0 0 0 0-3z"/></svg></span>
+        <span class="text"><span class="label">Leipzig Roleplay</span><span class="sub">Discord-Server</span></span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </li>
+    <li class="group" style="--i:9">Leitstellenspiel</li>
+    <li style="--i:10">
+      <a class="link" href="https://forum.leitstellenspiel.de/cms/index.php?user/24841-lennypegauofficial/" target="_blank" rel="noopener noreferrer">
+        <span class="badge" style="--c:#e63946"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10v2H7zM8 17v-5a4 4 0 0 1 8 0v5zM11 3h2v3h-2zM4.200 5.600l1.400-1.400 2 2-1.400 1.400zM18.400 4.200l1.400 1.400-2 2-1.400-1.400zM2 11h3v2H2zM19 11h3v2h-3z"/></svg></span>
+        <span class="text"><span class="label">Leitstellenspiel Forum</span><span class="sub">Mein Profil im Forum</span></span>
+        <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </li>
+  </ul>
+</main>
+</body>
+</html>
